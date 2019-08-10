@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component} from 'react';
+import DateSelector from './DateSelector';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+	constructor(props){
+		super(props);				
+		this.state = {
+			selectedDays: ''		
+		}		
+	}
+	
+	dayClick = (dayValue) =>{
+		var days = dayValue.map((val)=>{
+			return val+',';
+		});
+		this.setState({selectedDays:days})
+	}
+
+  render(){ 
+    return (
+      	<div>  	
+            <DateSelector dayClick={this.dayClick}/>
+			<div style={{marginTop:"50px",position:"relative"}}>SELECTED DAYS : {this.state.selectedDays}</div>
+		</div> 
+    );
+  }
 }
-
 export default App;
