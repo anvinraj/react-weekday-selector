@@ -4,6 +4,6 @@ A simple Weekday selector using react.User can select ang get the selected weekd
 
 Screen images,
 
-![Screenshot](weekday1.png)
+![Screenshot](weekday1.PNG)
 
 On selection of days ,
