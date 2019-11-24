@@ -7,3 +7,5 @@ Screen images,
 ![Screenshot](weekday1.PNG)
 
 On selection of days ,
+
+![Screenshot](weekday2.PNG)
